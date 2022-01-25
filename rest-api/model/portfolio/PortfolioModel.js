@@ -2,12 +2,20 @@ const Connection = require("../../database/Connection");
 
 class PortfolioModel {
 
-   static findAll(portfolio) {
-      return Connection.query("SELECT * FROM portfolio LIMIT 100", portfolio);
+   static findAll(call) {
+      return Connection.query("SELECT * FROM portfolio LIMIT 100", call);
    }
 
-   static findById(id, portfolio) {
-      return Connection.query(`SELECT * FROM portfolio WHERE id_portfolio=${id}`, portfolio);
+   static findById(id, call) {
+      return Connection.query(`SELECT * FROM portfolio WHERE id_portfolio=${id}`, call);
+   }
+
+   static create(portfolio, call) {
+      return Connection.query(`INSERT INTO portfolio (descricao, detalhes) VALUES(${portfolio.descricao}, ${portfolio.detalhes})`, call);
+   }
+
+   static update(portfolio, id, call) {
+      return Connection.query(`UPDATE portfolio descricao=${portfolio.descricao} detalhes=${portfolio.detalhes} WHERE id=${id}`, call)
    }
 }
 
