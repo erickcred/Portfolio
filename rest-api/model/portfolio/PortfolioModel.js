@@ -11,7 +11,7 @@ class PortfolioModel {
    }
 
    static create(portfolio, call) {
-      return Connection.query(`INSERT INTO portfolio (descricao, detalhes) VALUES(${portfolio.descricao}, ${portfolio.detalhes})`, call);
+      return Connection.query(`INSERT INTO portfolio (descricao, detalhes) VALUES(?, ?)`, [portfolio.descricao, portfolio.detalhes], call);
    }
 
    static update(portfolio, id, call) {
