@@ -74,9 +74,9 @@ router.post("/", (req, res, next) => {
    })
 });
 
-router.put("/:id", (req, res, next) => {
+router.put("/", (req, res, next) => {
    
-   PortfolioModel.update(req.body, req.params.id, (erro, data) => {
+   PortfolioModel.update(req.body, (erro, data) => {
       let response = new ResponseModel();
 
       if (erro) {

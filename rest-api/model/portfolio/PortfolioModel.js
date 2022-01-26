@@ -18,8 +18,8 @@ class PortfolioModel {
       return Connection.query(`INSERT INTO portfolio (descricao, detalhes) VALUES(?, ?)`, [portfolio.descricao, portfolio.detalhes], call);
    }
 
-   static update(portfolio, id, call) {
-      return Connection.query(`UPDATE portfolio SET descricao=?, detalhes=? WHERE id_portfolio=${id}`, [portfolio.descricao, portfolio.detalhes], call)
+   static update(portfolio, call) {
+      return Connection.query(`UPDATE portfolio SET descricao=?, detalhes=? WHERE id_portfolio=?`, [portfolio.descricao, portfolio.detalhes, portfolio.id], call)
    }
 
    static trash(id, call) {
