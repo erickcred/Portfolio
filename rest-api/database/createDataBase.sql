@@ -13,6 +13,6 @@ CREATE TABLE IF NOT EXISTS portfolio  (
 -- ("Desenvolvimento de Websites", "Tecnologias JavaScript, NodeJs, Express e MySQL"),
 -- ("Desenvovimento de API's", "Tecnologias JavaScript, NodeJs, Express e MySQL");
 
-ALTER TABLE portfolio ADD COLUMN lixeira TINYINT NULL DEFAULT 0 AFTER detalhes;
+--ALTER TABLE portfolio ADD COLUMN lixeira TINYINT NULL DEFAULT 0 AFTER detalhes;
 
 SELECT * FROM erick_portfolio.portfolio LIMIT 100;

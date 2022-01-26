@@ -19,7 +19,7 @@ class PortfolioModel {
    }
 
    static update(portfolio, id, call) {
-      return Connection.query(`UPDATE portfolio SET descricao=? , detalhes=? WHERE id_portfolio=${id}`, [portfolio.descricao, portfolio.detalhes], call)
+      return Connection.query(`UPDATE portfolio SET descricao=?, detalhes=? WHERE id_portfolio=${id}`, [portfolio.descricao, portfolio.detalhes], call)
    }
 
    static trash(id, call) {
