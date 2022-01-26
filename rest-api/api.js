@@ -15,7 +15,7 @@ api.get("/", (req, res) => {
 });
 
 // Routers
-const portfolioRouter = require("./router/portfoliorouter");
+const portfolioRouter = require("./router/portfolioRouter");
 api.use("/portfolio", portfolioRouter);
 
 
