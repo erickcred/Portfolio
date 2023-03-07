@@ -48,14 +48,23 @@ section {
 
 h1 {
     @include titulo(70px);
+    @media (max-width: 768px) {
+        @include titulo(50px);
+    }
 }
 
 h2 {
     @include titulo(55px);
+    @media (max-width: 768px) {
+        @include titulo(35px);
+    }
 }
 
 h3 {
     @include titulo(30px);
+    @media (max-width: 768px) {
+        @include titulo(30px);
+    }
 }
 
 h4 {
@@ -68,5 +77,11 @@ h4 {
     &:hover {
         color: #c0f64d;
         text-decoration: underline;
+    }
+}
+
+footer {
+    p {
+        color: #7e7e7e;
     }
 }
