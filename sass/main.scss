@@ -1,0 +1,72 @@
+@import '../node_modules/bootstrap/scss/_functions';
+@import '../node_modules/bootstrap/scss/_variables';
+
+// cria as cores personalizadas
+$custom-theme-colors: (
+    "verde": #c0f64d,
+    "preto": #141620
+);
+// adiciona aos arquivos do bootstrap
+$theme-colors: map-merge($custom-theme-colors, $theme_colors);
+
+@import '../node_modules/bootstrap/scss/bootstrap';
+
+
+@import 'header';
+@import 'destaques';
+@import 'servicos';
+@import 'skills';
+@import 'projetos';
+@import 'contato';
+
+
+* {
+    // border: 1px dashed pink;
+    margin: 0;
+    padding: 0;
+}
+
+
+#servicos, #projetos {
+    background-color: #c0f64d;
+    color: #000;
+}
+body {
+    color: #fafafa;
+}
+
+@mixin titulo($fontSize: 32px) {
+    font-weight: bolder;
+    font-size: $fontSize;
+    line-height: $fontSize + 27px;
+    margin-bottom: 1rem;
+}
+
+section {
+    padding: 10rem 0;
+}
+
+h1 {
+    @include titulo(70px);
+}
+
+h2 {
+    @include titulo(55px);
+}
+
+h3 {
+    @include titulo(30px);
+}
+
+h4 {
+    @include titulo(25px);
+}
+
+.email {
+    color: #c0f64d;
+    text-decoration: none;
+    &:hover {
+        color: #c0f64d;
+        text-decoration: underline;
+    }
+}
