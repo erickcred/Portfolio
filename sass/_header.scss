@@ -1,0 +1,39 @@
+header {
+    background-color: #141620;
+    position: sticky;
+    top: 0;
+    left: 0;
+    
+    .navbar {
+        color: #fafafa;
+        padding: 1.1rem 0;
+        
+
+        .nav-link {
+            color: #fafafa;
+            font-weight: bold;
+    
+            &:hover {
+                background-color: #c0f64d;
+                color: #000;
+            }
+            &.active {
+                color: #c0f64d;
+                &:hover {
+                    background-color: #c0f64d;
+                    color: #000;
+                }
+            }
+        }
+    
+        button {
+            background-color: #c0f64d;
+        }
+    }
+}
+    
+
+
+
+
+

@@ -1,0 +1,18 @@
+#destaque {
+    padding: 5rem 0;
+
+    @media (max-width: 768px) {
+        justify-content: center;
+    }
+
+    p {
+        color: #7e7e7e;
+        padding-bottom: 1.5rem;
+    }
+    button {
+        font-size: 1.1rem;
+        font-weight: bold;
+        padding: 10px 20px;
+        margin-bottom: 1.5rem;
+    }
+}
